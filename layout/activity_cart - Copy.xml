@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.CartActivity">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:id="@+id/tvShoppingCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shopping Cart"
+        android:textAlignment="center"
+        android:textColor="#165519"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/total"
+        android:layout_below="@id/tvShoppingCart"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnOrder"
+        android:layout_toLeftOf="@id/ivTotal"
+        android:background="@color/white"
+        android:text="Total: "
+        android:textAlignment="textEnd"
+        android:textColor="#F44336"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ivTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnOrder"
+        android:layout_alignParentEnd="true"
+        android:background="@color/white"
+        android:text=" 3000vnd "
+        android:textColor="#F44336"
+        android:textSize="30sp"
+        android:layout_marginRight="13dp"
+        android:paddingLeft="13dp"/>
+
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:backgroundTint="#00A651"
+        android:text="ORDER"
+        android:textSize="22sp"
+        app:strokeWidth="2dp" />
+
+
+</RelativeLayout>
